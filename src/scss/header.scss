@@ -1,0 +1,25 @@
+@import "partials/params";
+@import "partials/mixins";
+
+.nav {
+  width: 100%;
+  height: $nav-height;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__logo {
+    width: 150px;
+    height: 55px;
+    font-size: 36px;
+    font-weight: 600;
+    color: $dark-text-color;
+    @include flex-center(row);
+    border: 2px solid $text-color;
+  }
+
+  &__menu {
+    font-size: 36px;
+    color: $menu-color;
+  }
+}
