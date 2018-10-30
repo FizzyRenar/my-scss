@@ -24,7 +24,10 @@ gulp.task('scss', function(){
         .pipe(gulpIf(config.isDev, sourcemaps.init()))
         .pipe(scss())
         .pipe(concat(config.output.cssName))
-        .pipe(autoprefixer())
+        .pipe(autoprefixer({
+            browsers: ['last 2 versions'],
+            cascade: false
+        }))
         .pipe(gulpIf(!config.isDevelop, cleanCss()))
         .pipe(gulpIf(config.isDev, sourcemaps.write()))
         .pipe(gulp.dest(config.output.path))

@@ -28,9 +28,25 @@ a {
   flex-direction: column;
   width: 100%;
   overflow: hidden;
-  background-color: $main-bg-color;
+
+  h1 {
+    font-size: 50px;
+    line-height: 60px;
+  }
+  p{
+    text-align: center;
+    font-size: 16px;
+    line-height: 25px;
+  }
 }
 
 .first-letter {
   color: $orange;
+}
+
+.grey-block {
+  background-color: $main-bg-color;
+}
+.white-block {
+  background-color: #fff;
 }
